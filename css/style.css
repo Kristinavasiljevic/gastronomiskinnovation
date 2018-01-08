@@ -1,0 +1,466 @@
+@charset "UTF-8";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: verdana;
+  background-color: white;
+  color: black;
+  max-width: 100%;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*mobile first*/
+nav {
+  height: 0px;
+}
+
+/* start burgermenu*/
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  /*Burgermenuen*/
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+  /*
+   * And let's slide it in from the left
+   */
+  /*
+   * Transform all the slices of hamburger
+   * into a crossmark.
+   */
+  /*
+   * But let's hide the middle one.
+   */
+  /*
+   * Ohyeah and the last one should go the other direction
+   */
+}
+#menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+#menu {
+  position: absolute;
+  width: 500px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  /*farven på kassen og punkterne*/
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /*hvor på siden menuen er inden du trykker på den */
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  /* floatet når man trykker på menuen*/
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  /*str på bogstaverne og padding dvs. mellemrummet mellem dem*/
+  padding: 45px 0;
+  font-size: 22px;
+}
+#menu li:hover {
+  /* farven hen over bogstaverne i menuen*/
+  color: pink;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  /*background-color: #232523;*/
+}
+#menu a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+#menu a:hover {
+  /* farven hen over bogstaverne i menuen*/
+  color: pink;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  /*background-color: #232523;*/
+}
+
+/*slut burgermenu*/
+/* start baggrund*/
+/* hero er billederne og deres position */
+#hero1 {
+  background: url("../img/graashop.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin-top: -15px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  background-attachment: scroll;
+}
+#hero1 h1 {
+  text-align: center;
+  margin: auto;
+  margin-top: 30%;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3em;
+}
+
+#hero2 {
+  background: url("../img/svampp.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  background-attachment: scroll;
+}
+
+#hero3 {
+  background: url("../img/flasker.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  background-attachment: scroll;
+}
+
+/*teksten på billederne samt på de hvide kasser */
+.hero, .content {
+  position: relative;
+  width: 100%;
+  /*str. på billederne*/
+}
+.hero .inner, .content .inner {
+  top: 0;
+  min-height: 600px;
+  position: relative;
+}
+
+.content {
+  /* str. på de hvide kasser */
+}
+.content .inner1 {
+  height: 100%;
+  position: relative;
+}
+.content .inner1 p {
+  font-family: 'Open Sans', sans-serif;
+  padding: 8%;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  padding-top: 0;
+  text-align: justify;
+}
+.content .inner1 h4 {
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 8%;
+  margin-top: 8%;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+.content .inner4 {
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.content .inner4 .flex-container {
+  width: 90%;
+  margin: auto;
+}
+.content .inner4 .flex-container div {
+  width: 33%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.content .inner4 .flex-container div img {
+  width: 100%;
+  height: auto;
+  max-height: 526px;
+}
+.content .inner4 .flex-container div p {
+  font-family: 'Open Sans', sans-serif;
+  padding: 8%;
+  letter-spacing: 1px;
+  line-height: 1.7;
+}
+
+/* hvis der skal en overflade over billederne*/
+/*.hero .inner{
+  background: rgba(0,0,0,0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}*/
+.hero h1, .hero p {
+  color: #fff;
+}
+
+.content h1, .content p {
+  color: #333;
+}
+
+h1 {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  padding: 0px 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 0px 20px;
+  line-height: 1.7;
+}
+
+/* footer begynder */
+.footer {
+  background-color: black;
+  width: 100%;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 50px;
+  position: absolute;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* footer left*/
+/*.footer .footer-left {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.footer .about {
+  line-height: 20px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer .icons {
+  margin-top: 25px;
+}*/
+/* footer center*/
+.footer .footer-center {
+  width: 30%;
+}
+
+.footer .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #ffc35f;
+  text-decoration: none;
+}
+
+.fa-map-marker {
+  margin-left: 20%;
+}
+
+/* footer right*/
+.footer .footer-right {
+  width: 50%;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer h2 span {
+  color: #ffc35f;
+}
+
+.footer .menu {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .name {
+  color: #ffc35f;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    font-size: 14px;
+  }
+
+  .footer .footer-left,
+  .footer .footer-center,
+  .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer .footer-center i {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
