@@ -32,13 +32,13 @@ nav{
 
     cursor: pointer;
 
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
+    opacity: 0; /*  */
+    z-index: 2; /*  */
 
     -webkit-touch-callout: none;
 
     /*
-     * And let's slide it in from the left
+     *
      */
 
     &:checked ~ ul
@@ -47,8 +47,8 @@ nav{
     }
 
     /*
-     * Transform all the slices of hamburger
-     * into a crossmark.
+     *
+     *
      */
     &:checked ~ span
     {
@@ -58,7 +58,7 @@ nav{
     }
 
     /*
-     * But let's hide the middle one.
+     *
      */
     &:checked ~ span:nth-last-child(3)
     {
@@ -67,7 +67,7 @@ nav{
     }
 
     /*
-     * Ohyeah and the last one should go the other direction
+     *
      */
     &:checked ~ span:nth-last-child(2)
     {
@@ -104,8 +104,7 @@ nav{
     &:nth-last-child(2)
     {
       transform-origin: 0% 100%;
-  }
-
+    }
   }
 }
 
@@ -131,7 +130,7 @@ nav{
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
       li {  /*str på bogstaverne og padding dvs. mellemrummet mellem dem*/
-        padding: 45px 0 ;
+        padding: 27px  ;
         font-size:22px;
 
         &:hover{ /* farven hen over bogstaverne i menuen*/
@@ -167,7 +166,7 @@ nav{
   background-position:center center;
   background-attachment:fixed;
   /*margin-top: -15px;*/
-  width: 104%;
+  width: 100%;
   height: 100%;
   max-width: 100%;
   overflow: scroll;
@@ -196,7 +195,7 @@ nav{
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
-  width: 104%;
+  width: 100%;
   height: 100%;
   max-width: 100%;
   overflow: scroll;
@@ -208,7 +207,7 @@ nav{
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
-  width: 104%;
+  width: 100%;
   max-width: 100%;
   overflow: scroll;
   background-attachment: scroll;
@@ -219,7 +218,7 @@ nav{
   background-size:cover;
   background-position:center center;
   background-attachment:fixed;
-  width: 104%;
+  width: 100%;
   max-width: 100%;
   overflow: scroll;
   background-attachment: scroll;
@@ -238,7 +237,6 @@ nav{
 
   }
  }
-
 
   .content{ /* str. på de hvide kasser */
    .inner1{
@@ -263,7 +261,6 @@ nav{
      }
    }
  }
-
 
 
 .content{
@@ -291,6 +288,10 @@ nav{
             color: #c6b696;
             font-weight: bold;
           }
+          a{
+            text-decoration: underline;
+            color: black;
+          }
         }
       }
     }
@@ -308,13 +309,6 @@ nav{
         }
       }
     }
-
-
-
-
-/* hvis der skal en overflade over billederne*/
-/*.hero .inner{
-  background: rgba(0,0,0,0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}*/
 
 
 /* footer begynder */
@@ -335,11 +329,11 @@ nav{
   width: 49%;
 
   i{
-    background-color: #33383b;
+    /*background-color: #33383b;*/
     color: #ffffff;
+    font-size: 25px;
     width: 38px;
     height: 38px;
-    font-size: 25px;
     border-radius: 50%;
     text-align: center;
     line-height: 42px;
@@ -354,8 +348,8 @@ nav{
     span{
       display: block;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 2;
+      /*font-size: 14px;
+      line-height: 2;*/
     }
     a{
       color: #c6b696;
@@ -363,6 +357,7 @@ nav{
     }
     }
   }
+
 .footer-right{
   text-align: center;
   width: 50%;
@@ -422,10 +417,17 @@ nav{
 
   .flex-container{
     display: flex;
+    img{
+      width: 100%;
+      height: auto;
+    }
     div{
       width: 33%;
       margin-left: 2%;
       margin-right: 2%;
+    }
+    p{
+      padding:0;
     }
   }
   #hero1{
@@ -460,6 +462,12 @@ nav{
 .footer{
   display: flex;
 }
+#menu{
+  li{
+      padding: 42px  ;
+      font-size:22px;
+  }
+ }
 }
 
 @media screen and (min-width: 700px) {

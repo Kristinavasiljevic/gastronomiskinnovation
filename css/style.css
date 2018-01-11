@@ -55,22 +55,22 @@ nav {
   left: -5px;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
+  /*  */
   z-index: 2;
-  /* and place it over the hamburger */
+  /*  */
   -webkit-touch-callout: none;
   /*
-   * And let's slide it in from the left
+   *
    */
   /*
-   * Transform all the slices of hamburger
-   * into a crossmark.
+   *
+   *
    */
   /*
-   * But let's hide the middle one.
+   *
    */
   /*
-   * Ohyeah and the last one should go the other direction
+   *
    */
 }
 #menuToggle input:checked ~ ul {
@@ -140,7 +140,7 @@ nav {
 }
 #menu li {
   /*str på bogstaverne og padding dvs. mellemrummet mellem dem*/
-  padding: 45px 0;
+  padding: 27px;
   font-size: 22px;
 }
 #menu li:hover {
@@ -171,7 +171,7 @@ nav {
   background-position: center center;
   background-attachment: fixed;
   /*margin-top: -15px;*/
-  width: 104%;
+  width: 100%;
   height: 100%;
   max-width: 100%;
   overflow: scroll;
@@ -199,7 +199,7 @@ nav {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  width: 104%;
+  width: 100%;
   height: 100%;
   max-width: 100%;
   overflow: scroll;
@@ -211,7 +211,7 @@ nav {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  width: 104%;
+  width: 100%;
   max-width: 100%;
   overflow: scroll;
   background-attachment: scroll;
@@ -222,7 +222,7 @@ nav {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  width: 104%;
+  width: 100%;
   max-width: 100%;
   overflow: scroll;
   background-attachment: scroll;
@@ -288,6 +288,10 @@ nav {
   color: #c6b696;
   font-weight: bold;
 }
+.content .inner2 .flex-container a {
+  text-decoration: underline;
+  color: black;
+}
 
 .content .inner3 {
   height: 100%;
@@ -300,9 +304,6 @@ nav {
   margin: auto;
 }
 
-/* hvis der skal en overflade over billederne*/
-/*.hero .inner{
-  background: rgba(0,0,0,0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}*/
 /* footer begynder */
 .footer {
   background-color: black;
@@ -320,11 +321,11 @@ nav {
   width: 49%;
 }
 .footer .footer-left i {
-  background-color: #33383b;
+  /*background-color: #33383b;*/
   color: #ffffff;
+  font-size: 25px;
   width: 38px;
   height: 38px;
-  font-size: 25px;
   border-radius: 50%;
   text-align: center;
   line-height: 42px;
@@ -339,8 +340,8 @@ nav {
 .footer .footer-left p span {
   display: block;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
+  /*font-size: 14px;
+  line-height: 2;*/
 }
 .footer .footer-left p a {
   color: #c6b696;
@@ -403,10 +404,17 @@ nav {
     display: -ms-flexbox;
     display: flex;
   }
+  .flex-container img {
+    width: 100%;
+    height: auto;
+  }
   .flex-container div {
     width: 33%;
     margin-left: 2%;
     margin-right: 2%;
+  }
+  .flex-container p {
+    padding: 0;
   }
 
   #hero1 h1 {
@@ -440,6 +448,11 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  #menu li {
+    padding: 42px;
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 700px) {
