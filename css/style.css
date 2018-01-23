@@ -140,8 +140,8 @@ nav {
 }
 #menu li {
   /*str på bogstaverne og padding dvs. mellemrummet mellem dem*/
-  padding: 27px;
   font-size: 22px;
+  padding: 27px;
 }
 #menu li:hover {
   /* farven hen over bogstaverne i menuen*/
@@ -282,7 +282,6 @@ nav {
 }
 .content .inner2 .flex-container p {
   font-family: 'Open Sans', sans-serif;
-  padding: 8%;
   letter-spacing: 1px;
   line-height: 1.7;
 }
@@ -399,6 +398,10 @@ nav {
   .footer .footer-left i {
     margin-right: 100%;
   }
+
+  .content .inner2 p {
+    padding: 8%;
+  }
 }
 @media screen and (min-width: 767px) {
   .flex-container {
@@ -453,7 +456,7 @@ nav {
   }
 
   #menu li {
-    padding: 42px;
+    padding: 35px;
     font-size: 22px;
   }
 }

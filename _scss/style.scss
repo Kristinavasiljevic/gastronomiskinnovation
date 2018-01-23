@@ -130,8 +130,8 @@ nav{
       transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
       li {  /*str på bogstaverne og padding dvs. mellemrummet mellem dem*/
-        padding: 27px  ;
         font-size:22px;
+        padding: 27px;
 
         &:hover{ /* farven hen over bogstaverne i menuen*/
           color: #c6b696;
@@ -282,7 +282,6 @@ nav{
 
           p{
             font-family: 'Open Sans', sans-serif;
-            padding:8%;
             letter-spacing: 1px;
             line-height: 1.7;
           }
@@ -412,6 +411,13 @@ nav{
   .footer .footer-left i {
     margin-right: 100%;
   }
+  .content{
+    .inner2{
+      p{
+        padding: 8%;
+      }
+    }
+  }
 }
 
 
@@ -466,7 +472,7 @@ nav{
 }
 #menu{
   li{
-      padding: 42px  ;
+      padding: 35px;
       font-size:22px;
   }
  }
